@@ -1,0 +1,15 @@
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\RadixSort\bin\Debug\net10.0\RadixSort.exe
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\RadixSort\bin\Debug\net10.0\RadixSort.deps.json
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\RadixSort\bin\Debug\net10.0\RadixSort.runtimeconfig.json
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\RadixSort\bin\Debug\net10.0\RadixSort.dll
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\RadixSort\bin\Debug\net10.0\RadixSort.pdb
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\RadixSort\obj\Debug\net10.0\RadixSort.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\RadixSort\obj\Debug\net10.0\RadixSort.AssemblyInfoInputs.cache
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\RadixSort\obj\Debug\net10.0\RadixSort.AssemblyInfo.cs
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\RadixSort\obj\Debug\net10.0\RadixSort.csproj.CoreCompileInputs.cache
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\RadixSort\obj\Debug\net10.0\RadixSort.sourcelink.json
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\RadixSort\obj\Debug\net10.0\RadixSort.dll
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\RadixSort\obj\Debug\net10.0\refint\RadixSort.dll
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\RadixSort\obj\Debug\net10.0\RadixSort.pdb
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\RadixSort\obj\Debug\net10.0\RadixSort.genruntimeconfig.cache
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\RadixSort\obj\Debug\net10.0\ref\RadixSort.dll

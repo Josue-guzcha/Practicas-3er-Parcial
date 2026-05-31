@@ -1,0 +1,15 @@
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\StraightMerging\bin\Debug\net10.0\StraightMerging.exe
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\StraightMerging\bin\Debug\net10.0\StraightMerging.deps.json
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\StraightMerging\bin\Debug\net10.0\StraightMerging.runtimeconfig.json
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\StraightMerging\bin\Debug\net10.0\StraightMerging.dll
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\StraightMerging\bin\Debug\net10.0\StraightMerging.pdb
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\StraightMerging\obj\Debug\net10.0\StraightMerging.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\StraightMerging\obj\Debug\net10.0\StraightMerging.AssemblyInfoInputs.cache
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\StraightMerging\obj\Debug\net10.0\StraightMerging.AssemblyInfo.cs
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\StraightMerging\obj\Debug\net10.0\StraightMerging.csproj.CoreCompileInputs.cache
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\StraightMerging\obj\Debug\net10.0\StraightMerging.sourcelink.json
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\StraightMerging\obj\Debug\net10.0\StraightMerging.dll
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\StraightMerging\obj\Debug\net10.0\refint\StraightMerging.dll
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\StraightMerging\obj\Debug\net10.0\StraightMerging.pdb
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\StraightMerging\obj\Debug\net10.0\StraightMerging.genruntimeconfig.cache
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\StraightMerging\obj\Debug\net10.0\ref\StraightMerging.dll

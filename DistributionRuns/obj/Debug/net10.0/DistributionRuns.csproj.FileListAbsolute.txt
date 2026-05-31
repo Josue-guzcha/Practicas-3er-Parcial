@@ -1,0 +1,15 @@
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\DistributionRuns\bin\Debug\net10.0\DistributionRuns.exe
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\DistributionRuns\bin\Debug\net10.0\DistributionRuns.deps.json
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\DistributionRuns\bin\Debug\net10.0\DistributionRuns.runtimeconfig.json
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\DistributionRuns\bin\Debug\net10.0\DistributionRuns.dll
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\DistributionRuns\bin\Debug\net10.0\DistributionRuns.pdb
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\DistributionRuns\obj\Debug\net10.0\DistributionRuns.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\DistributionRuns\obj\Debug\net10.0\DistributionRuns.AssemblyInfoInputs.cache
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\DistributionRuns\obj\Debug\net10.0\DistributionRuns.AssemblyInfo.cs
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\DistributionRuns\obj\Debug\net10.0\DistributionRuns.csproj.CoreCompileInputs.cache
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\DistributionRuns\obj\Debug\net10.0\DistributionRuns.sourcelink.json
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\DistributionRuns\obj\Debug\net10.0\DistributionRuns.dll
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\DistributionRuns\obj\Debug\net10.0\refint\DistributionRuns.dll
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\DistributionRuns\obj\Debug\net10.0\DistributionRuns.pdb
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\DistributionRuns\obj\Debug\net10.0\DistributionRuns.genruntimeconfig.cache
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\DistributionRuns\obj\Debug\net10.0\ref\DistributionRuns.dll

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\Intercambio\\Intercambio.csproj": {}
+    "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\HeapSort\\HeapSort.csproj": {}
   },
   "projects": {
-    "c:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\Intercambio\\Intercambio.csproj": {
+    "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\HeapSort\\HeapSort.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\Intercambio\\Intercambio.csproj",
-        "projectName": "Intercambio",
-        "projectPath": "c:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\Intercambio\\Intercambio.csproj",
+        "projectUniqueName": "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\HeapSort\\HeapSort.csproj",
+        "projectName": "HeapSort",
+        "projectPath": "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\HeapSort\\HeapSort.csproj",
         "packagesPath": "C:\\Users\\josue\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\Intercambio\\obj\\",
+        "outputPath": "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\HeapSort\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\josue\\AppData\\Roaming\\NuGet\\NuGet.Config"

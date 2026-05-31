@@ -1,0 +1,15 @@
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\Intercambio\bin\Debug\net10.0\Intercambio.exe
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\Intercambio\bin\Debug\net10.0\Intercambio.deps.json
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\Intercambio\bin\Debug\net10.0\Intercambio.runtimeconfig.json
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\Intercambio\bin\Debug\net10.0\Intercambio.dll
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\Intercambio\bin\Debug\net10.0\Intercambio.pdb
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\Intercambio\obj\Debug\net10.0\Intercambio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\Intercambio\obj\Debug\net10.0\Intercambio.AssemblyInfoInputs.cache
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\Intercambio\obj\Debug\net10.0\Intercambio.AssemblyInfo.cs
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\Intercambio\obj\Debug\net10.0\Intercambio.csproj.CoreCompileInputs.cache
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\Intercambio\obj\Debug\net10.0\Intercambio.sourcelink.json
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\Intercambio\obj\Debug\net10.0\Intercambio.dll
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\Intercambio\obj\Debug\net10.0\refint\Intercambio.dll
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\Intercambio\obj\Debug\net10.0\Intercambio.pdb
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\Intercambio\obj\Debug\net10.0\Intercambio.genruntimeconfig.cache
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\Intercambio\obj\Debug\net10.0\ref\Intercambio.dll

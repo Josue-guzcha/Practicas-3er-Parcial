@@ -1,0 +1,15 @@
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\NaturalMerging\bin\Debug\net10.0\NaturalMerging.exe
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\NaturalMerging\bin\Debug\net10.0\NaturalMerging.deps.json
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\NaturalMerging\bin\Debug\net10.0\NaturalMerging.runtimeconfig.json
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\NaturalMerging\bin\Debug\net10.0\NaturalMerging.dll
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\NaturalMerging\bin\Debug\net10.0\NaturalMerging.pdb
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\NaturalMerging\obj\Debug\net10.0\NaturalMerging.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\NaturalMerging\obj\Debug\net10.0\NaturalMerging.AssemblyInfoInputs.cache
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\NaturalMerging\obj\Debug\net10.0\NaturalMerging.AssemblyInfo.cs
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\NaturalMerging\obj\Debug\net10.0\NaturalMerging.csproj.CoreCompileInputs.cache
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\NaturalMerging\obj\Debug\net10.0\NaturalMerging.sourcelink.json
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\NaturalMerging\obj\Debug\net10.0\NaturalMerging.dll
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\NaturalMerging\obj\Debug\net10.0\refint\NaturalMerging.dll
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\NaturalMerging\obj\Debug\net10.0\NaturalMerging.pdb
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\NaturalMerging\obj\Debug\net10.0\NaturalMerging.genruntimeconfig.cache
+C:\Users\josue\OneDrive\Documentos\GitHub\Practicas-3er-Parcial\NaturalMerging\obj\Debug\net10.0\ref\NaturalMerging.dll

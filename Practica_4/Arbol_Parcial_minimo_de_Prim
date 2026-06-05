@@ -1,0 +1,135 @@
+import heapq
+import matplotlib.pyplot as plt
+import networkx as nx
+import matplotlib.patches as mpatches
+
+
+def prim(grafo, origen):
+    # Conjunto de nodos ya incluidos en el árbol
+    visitados = set()
+    visitados.add(origen)
+
+    # Cola de prioridad: (peso, nodo_origen, nodo_destino)
+    cola = []
+    for vecino, peso in grafo[origen]:
+        heapq.heappush(cola, (peso, origen, vecino))
+
+    # Aquí guardamos las aristas que forman el árbol final
+    arbol = []
+    costo_total = 0
+    paso = 1
+
+    print("\n" + "="*60)
+    print(f"   ALGORITMO DE PRIM — Árbol Parcial Mínimo")
+    print(f"   Nodo de origen: {origen}")
+    print("="*60)
+
+    while cola:
+        # Tomar la arista de menor peso disponible
+        peso, desde, hasta = heapq.heappop(cola)
+
+        # Si el destino ya está en el árbol, la ignoramos (formaría un ciclo)
+        if hasta in visitados:
+            print(f"\n  Arista ({desde} → {hasta}, peso {peso}) — formaría ciclo, se omite")
+            continue
+
+        # Agregar el nodo al árbol
+        visitados.add(hasta)
+        arbol.append((desde, hasta, peso))
+        costo_total += peso
+
+        print(f"\n{'─'*60}")
+        print(f"  PASO {paso}: Arista seleccionada → ({desde} — {hasta}, peso {peso})")
+        print(f"  Nodos en el árbol: {sorted(visitados)}")
+        print(f"  Costo acumulado: {costo_total}")
+        paso += 1
+
+        # Agregar a la cola las aristas del nuevo nodo hacia nodos no visitados
+        print(f"  Nuevas aristas disponibles desde '{hasta}':")
+        for vecino, p in grafo[hasta]:
+            if vecino not in visitados:
+                heapq.heappush(cola, (p, hasta, vecino))
+                print(f"    → ({hasta} — {vecino}, peso {p}) agregada a la cola")
+
+    print(f"\n{'='*60}")
+    print("  ÁRBOL PARCIAL MÍNIMO FINAL")
+    print(f"{'='*60}")
+    for desde, hasta, peso in arbol:
+        print(f"  {desde} — {hasta}  |  peso: {peso}")
+    print(f"\n  Costo total del árbol: {costo_total}")
+
+    return arbol, costo_total
+
+
+# ============================================================
+# PARTE GRÁFICA — aquí empieza todo lo visual
+# Dibujamos el grafo completo en gris y encima
+# resaltamos en rojo las aristas que forman el MST
+# ============================================================
+def visualizar_grafo(grafo, arbol, origen):
+
+    # Construimos el grafo completo (no dirigido) con NetworkX
+    G = nx.Graph()
+    for nodo, vecinos in grafo.items():
+        for vecino, peso in vecinos:
+            G.add_edge(nodo, vecino, weight=peso)
+
+    # Convertimos las aristas del árbol a un set para identificarlas fácil
+    aristas_arbol = set()
+    for desde, hasta, peso in arbol:
+        aristas_arbol.add((desde, hasta))
+        aristas_arbol.add((hasta, desde))
+
+    pos = nx.spring_layout(G, seed=42)
+
+    # Nodo origen en dorado, los demás en azul
+    colores_nodos = ["#FFD700" if n == origen else "#4FC3F7" for n in G.nodes()]
+
+    # Aristas del MST en rojo y gruesas, las demás en gris delgadas
+    colores_aristas = ["#FF4444" if e in aristas_arbol else "#AAAAAA" for e in G.edges()]
+    anchos_aristas  = [3.0       if e in aristas_arbol else 1.0       for e in G.edges()]
+
+    etiquetas_pesos = nx.get_edge_attributes(G, 'weight')
+
+    plt.figure(figsize=(10, 7))
+    plt.title("Prim — Árbol Parcial Mínimo (MST)", fontsize=14, fontweight='bold', pad=20)
+
+    nx.draw_networkx_nodes(G, pos, node_color=colores_nodos, node_size=1200)
+    nx.draw_networkx_labels(G, pos, font_size=10, font_weight='bold')
+    nx.draw_networkx_edges(G, pos, edge_color=colores_aristas, width=anchos_aristas)
+    nx.draw_networkx_edge_labels(G, pos, edge_labels=etiquetas_pesos, font_size=9)
+
+    leyenda = [
+        mpatches.Patch(color='#FFD700', label=f'Origen ({origen})'),
+        mpatches.Patch(color='#4FC3F7', label='Otros nodos'),
+        mpatches.Patch(color='#FF4444', label='Aristas del MST'),
+        mpatches.Patch(color='#AAAAAA', label='Aristas no usadas'),
+    ]
+    plt.legend(handles=leyenda, loc='upper left', fontsize=9)
+
+    plt.axis('off')
+    plt.tight_layout()
+    plt.savefig("prim_grafo.png", dpi=150, bbox_inches='tight')
+    plt.show()
+# ============================================================
+# FIN DE LA PARTE GRÁFICA
+# ============================================================
+
+
+if __name__ == "__main__":
+
+    # Grafo no dirigido representado como diccionario
+    # Cada nodo tiene una lista de (vecino, peso)
+    # Como es no dirigido, cada arista aparece en ambos lados
+    grafo = {
+        'A': [('B', 2), ('D', 6)],
+        'B': [('A', 2), ('C', 3), ('D', 8), ('E', 5)],
+        'C': [('B', 3), ('E', 7)],
+        'D': [('A', 6), ('B', 8), ('E', 9)],
+        'E': [('B', 5), ('C', 7), ('D', 9)],
+    }
+
+    nodo_origen = 'A'
+
+    arbol, costo = prim(grafo, nodo_origen)
+    visualizar_grafo(grafo, arbol, nodo_origen)

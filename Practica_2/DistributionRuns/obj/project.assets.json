@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\DistributionRuns\\DistributionRuns.csproj",
+      "projectUniqueName": "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\Practica_2\\DistributionRuns\\DistributionRuns.csproj",
       "projectName": "DistributionRuns",
-      "projectPath": "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\DistributionRuns\\DistributionRuns.csproj",
+      "projectPath": "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\Practica_2\\DistributionRuns\\DistributionRuns.csproj",
       "packagesPath": "C:\\Users\\josue\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\DistributionRuns\\obj\\",
+      "outputPath": "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\Practica_2\\DistributionRuns\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\josue\\AppData\\Roaming\\NuGet\\NuGet.Config"

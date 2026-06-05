@@ -1,0 +1,157 @@
+import heapq
+import matplotlib.pyplot as plt
+import networkx as nx
+import matplotlib.patches as mpatches
+
+
+def dijkstra(grafo, origen):
+    distancias = {nodo: float('inf') for nodo in grafo}
+    distancias[origen] = 0
+    predecesores = {nodo: None for nodo in grafo}
+    cola_prioridad = [(0, origen)]
+    visitados = set()
+    paso = 1
+
+    print("\n" + "="*60)
+    print(f"   Nodo de origen: {origen}")
+    print("="*60)
+
+    print("\nDistancias iniciales:")
+    for nodo, dist in distancias.items():
+        print(f"   Nodo {nodo}: {'0' if nodo == origen else '∞'}")
+
+    while cola_prioridad:
+        distancia_actual, nodo_actual = heapq.heappop(cola_prioridad)
+
+        if nodo_actual in visitados:
+            continue
+
+        visitados.add(nodo_actual)
+
+        print(f"\n{'─'*60}")
+        print(f"  PASO {paso}: Procesando nodo → {nodo_actual}")
+        print(f"  Distancia desde '{origen}' hasta '{nodo_actual}': {distancia_actual}")
+        print(f"  Visitados: {sorted(visitados)}")
+        paso += 1
+
+        print(f"\n  Vecinos de '{nodo_actual}':")
+        for vecino, peso in grafo[nodo_actual]:
+            if vecino in visitados:
+                print(f"    → {vecino} (peso {peso}) — ya visitado, se omite")
+                continue
+
+            nueva_distancia = distancia_actual + peso
+
+            print(f"    → {vecino} | peso: {peso} | propuesta: {distancia_actual}+{peso}={nueva_distancia} | actual: {distancias[vecino]}", end="")
+
+            if nueva_distancia < distancias[vecino]:
+                distancias[vecino] = nueva_distancia
+                predecesores[vecino] = nodo_actual
+                heapq.heappush(cola_prioridad, (nueva_distancia, vecino))
+                print(f"  ✅ Actualizado: {nueva_distancia}")
+            else:
+                print(f"  ❌ No mejora: {distancias[vecino]}")
+
+    print(f"\n{'='*60}")
+    print("  RESULTADOS FINALES")
+    print(f"{'='*60}")
+    for nodo, dist in sorted(distancias.items()):
+        camino = reconstruir_camino(predecesores, origen, nodo)
+        print(f"  {nodo}: distancia = {dist}  |  Ruta: {' → '.join(camino)}")
+
+    return distancias, predecesores
+
+
+def reconstruir_camino(predecesores, origen, destino):
+    camino = []
+    nodo = destino
+    while nodo is not None:
+        camino.append(nodo)
+        nodo = predecesores[nodo]
+    camino.reverse()
+    if camino[0] != origen:
+        return ["Sin camino"]
+    return camino
+
+
+# ============================================================
+# PARTE GRÁFICA — aquí empieza todo lo visual
+# Usamos NetworkX para construir el grafo y
+# Matplotlib para dibujarlo en pantalla
+# ============================================================
+def visualizar_grafo(grafo, distancias, predecesores, origen):
+
+    # Creamos el grafo dirigido con NetworkX
+    G = nx.DiGraph()
+
+    # Agregamos cada arista con su peso
+    for nodo, vecinos in grafo.items():
+        for vecino, peso in vecinos:
+            G.add_edge(nodo, vecino, weight=peso)
+
+    # Identificamos qué aristas forman el camino óptimo
+    # para pintarlas de un color diferente
+    aristas_camino = set()
+    for nodo in grafo:
+        if predecesores[nodo] is not None:
+            aristas_camino.add((predecesores[nodo], nodo))
+
+    # Layout: posición automática de los nodos en el dibujo
+    pos = nx.spring_layout(G, seed=42)
+
+    # Color dorado para el origen, azul para los demás
+    colores_nodos = ["#FFD700" if nodo == origen else "#4FC3F7" for nodo in G.nodes()]
+
+    # Aristas del camino óptimo en rojo y más gruesas,
+    # las demás en gris delgadas
+    colores_aristas = ["#FF4444" if a in aristas_camino else "#AAAAAA" for a in G.edges()]
+    anchos_aristas  = [3.0       if a in aristas_camino else 1.0       for a in G.edges()]
+
+    # Etiquetas de cada nodo mostrando su distancia mínima
+    etiquetas_nodos = {nodo: f"{nodo}\n(d={distancias[nodo]})" for nodo in G.nodes()}
+
+    # Pesos de las aristas para mostrarlos sobre cada línea
+    etiquetas_pesos = nx.get_edge_attributes(G, 'weight')
+
+    # --- Dibujo final ---
+    plt.figure(figsize=(10, 7))
+    plt.title("Dijkstra — Caminos más cortos", fontsize=14, fontweight='bold', pad=20)
+
+    nx.draw_networkx_nodes(G, pos, node_color=colores_nodos, node_size=1200)
+    nx.draw_networkx_labels(G, pos, labels=etiquetas_nodos, font_size=8, font_weight='bold')
+    nx.draw_networkx_edges(G, pos, edge_color=colores_aristas, width=anchos_aristas,
+                           arrows=True, arrowsize=20, connectionstyle='arc3,rad=0.1')
+    nx.draw_networkx_edge_labels(G, pos, edge_labels=etiquetas_pesos, font_size=9)
+
+    # Leyenda para saber qué significa cada color
+    leyenda = [
+        mpatches.Patch(color='#FFD700', label=f'Origen ({origen})'),
+        mpatches.Patch(color='#4FC3F7', label='Otros nodos'),
+        mpatches.Patch(color='#FF4444', label='Camino más corto'),
+        mpatches.Patch(color='#AAAAAA', label='Aristas normales'),
+    ]
+    plt.legend(handles=leyenda, loc='upper left', fontsize=9)
+
+    plt.axis('off')
+    plt.tight_layout()
+    plt.savefig("dijkstra_grafo.png", dpi=150, bbox_inches='tight')
+    plt.show()
+# ============================================================
+# FIN DE LA PARTE GRÁFICA
+# ============================================================
+
+
+if __name__ == "__main__":
+
+    grafo = {
+        'A': [('B', 2), ('D', 6), ('C', 10)],
+        'B': [('C', 3), ('E', 8), ('D', 4)],
+        'C': [],
+        'D': [('E', 1), ('C', 9)],
+        'E': [('C', 5)]
+    }
+
+    nodo_origen = 'A'
+
+    distancias, predecesores = dijkstra(grafo, nodo_origen)
+    visualizar_grafo(grafo, distancias, predecesores, nodo_origen)

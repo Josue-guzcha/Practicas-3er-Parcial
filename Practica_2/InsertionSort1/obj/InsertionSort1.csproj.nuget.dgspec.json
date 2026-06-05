@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\InsertionSort1\\InsertionSort1.csproj": {}
+    "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\Practica_2\\InsertionSort1\\InsertionSort1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\InsertionSort1\\InsertionSort1.csproj": {
+    "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\Practica_2\\InsertionSort1\\InsertionSort1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\InsertionSort1\\InsertionSort1.csproj",
+        "projectUniqueName": "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\Practica_2\\InsertionSort1\\InsertionSort1.csproj",
         "projectName": "InsertionSort1",
-        "projectPath": "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\InsertionSort1\\InsertionSort1.csproj",
+        "projectPath": "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\Practica_2\\InsertionSort1\\InsertionSort1.csproj",
         "packagesPath": "C:\\Users\\josue\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\InsertionSort1\\obj\\",
+        "outputPath": "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\Practica_2\\InsertionSort1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\josue\\AppData\\Roaming\\NuGet\\NuGet.Config"

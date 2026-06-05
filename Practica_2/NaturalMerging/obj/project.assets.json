@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\NaturalMerging\\NaturalMerging.csproj",
+      "projectUniqueName": "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\Practica_2\\NaturalMerging\\NaturalMerging.csproj",
       "projectName": "NaturalMerging",
-      "projectPath": "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\NaturalMerging\\NaturalMerging.csproj",
+      "projectPath": "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\Practica_2\\NaturalMerging\\NaturalMerging.csproj",
       "packagesPath": "C:\\Users\\josue\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\NaturalMerging\\obj\\",
+      "outputPath": "C:\\Users\\josue\\OneDrive\\Documentos\\GitHub\\Practicas-3er-Parcial\\Practica_2\\NaturalMerging\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\josue\\AppData\\Roaming\\NuGet\\NuGet.Config"

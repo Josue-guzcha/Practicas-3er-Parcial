@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BalancedMerging")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0d6d573b57ee5a2d0aa08682701bc95a76470d6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1f22b991f9ad57c0e857bf9f8df7d601220bf09")]
 [assembly: System.Reflection.AssemblyProductAttribute("BalancedMerging")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BalancedMerging")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

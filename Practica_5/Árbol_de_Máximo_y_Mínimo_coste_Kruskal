@@ -1,0 +1,144 @@
+import matplotlib.pyplot as plt
+import networkx as nx
+import matplotlib.patches as mpatches
+
+
+# Union-Find: estructura para rastrear qué nodos ya están conectados
+# y evitar que se formen ciclos al agregar aristas
+
+def encontrar(padre, nodo):
+    # Sigue al "padre" del nodo hasta llegar a la raíz del grupo
+    if padre[nodo] != nodo:
+        padre[nodo] = encontrar(padre, padre[nodo])
+    return padre[nodo]
+
+def unir(padre, rango, a, b):
+    # Une dos grupos distintos en uno solo
+    raiz_a = encontrar(padre, a)
+    raiz_b = encontrar(padre, b)
+    if rango[raiz_a] < rango[raiz_b]:
+        padre[raiz_a] = raiz_b
+    elif rango[raiz_a] > rango[raiz_b]:
+        padre[raiz_b] = raiz_a
+    else:
+        padre[raiz_b] = raiz_a
+        rango[raiz_a] += 1
+
+
+def kruskal(nodos, aristas):
+    # Ordenar todas las aristas de menor a mayor peso — clave de Kruskal
+    aristas_ordenadas = sorted(aristas, key=lambda x: x[2])
+
+    # Inicializar Union-Find: cada nodo es su propio grupo al inicio
+    padre = {nodo: nodo for nodo in nodos}
+    rango  = {nodo: 0    for nodo in nodos}
+
+    arbol = []
+    costo_total = 0
+    paso = 1
+
+    print("\n" + "="*60)
+    print("   ALGORITMO DE KRUSKAL — Árbol Parcial Mínimo")
+    print("="*60)
+
+    print("\nAristas ordenadas de menor a mayor peso:")
+    for a, b, peso in aristas_ordenadas:
+        print(f"   ({a} — {b}, peso {peso})")
+
+    print(f"\n{'─'*60}")
+    print("  Procesando aristas:")
+
+    for a, b, peso in aristas_ordenadas:
+        raiz_a = encontrar(padre, a)
+        raiz_b = encontrar(padre, b)
+
+        # Si los dos nodos están en grupos distintos, no forman ciclo
+        if raiz_a != raiz_b:
+            unir(padre, rango, a, b)
+            arbol.append((a, b, peso))
+            costo_total += peso
+
+            print(f"\n  PASO {paso}: ✅ Arista ({a} — {b}, peso {peso}) agregada al árbol")
+            print(f"  Costo acumulado: {costo_total}")
+            paso += 1
+        else:
+            print(f"\n  Arista ({a} — {b}, peso {peso}) ❌ formaría ciclo, se omite")
+
+    print(f"\n{'='*60}")
+    print("  ÁRBOL PARCIAL MÍNIMO FINAL")
+    print(f"{'='*60}")
+    for a, b, peso in arbol:
+        print(f"  {a} — {b}  |  peso: {peso}")
+    print(f"\n  Costo total del árbol: {costo_total}")
+
+    return arbol, costo_total
+
+
+# ============================================================
+# PARTE GRÁFICA — aquí empieza todo lo visual
+# Dibujamos el grafo completo en gris y encima
+# resaltamos en rojo las aristas que forman el MST
+# ============================================================
+def visualizar_grafo(nodos, aristas, arbol):
+
+    G = nx.Graph()
+    for nodo in nodos:
+        G.add_node(nodo)
+    for a, b, peso in aristas:
+        G.add_edge(a, b, weight=peso)
+
+    # Identificar las aristas del árbol para resaltarlas
+    aristas_arbol = set()
+    for a, b, peso in arbol:
+        aristas_arbol.add((a, b))
+        aristas_arbol.add((b, a))
+
+    pos = nx.spring_layout(G, seed=42)
+
+    colores_nodos  = ["#4FC3F7" for _ in G.nodes()]
+    colores_aristas = ["#FF4444" if e in aristas_arbol else "#AAAAAA" for e in G.edges()]
+    anchos_aristas  = [3.0       if e in aristas_arbol else 1.0       for e in G.edges()]
+    etiquetas_pesos = nx.get_edge_attributes(G, 'weight')
+
+    plt.figure(figsize=(10, 7))
+    plt.title("Kruskal — Árbol Parcial Mínimo (MST)", fontsize=14, fontweight='bold', pad=20)
+
+    nx.draw_networkx_nodes(G, pos, node_color=colores_nodos, node_size=1200)
+    nx.draw_networkx_labels(G, pos, font_size=10, font_weight='bold')
+    nx.draw_networkx_edges(G, pos, edge_color=colores_aristas, width=anchos_aristas)
+    nx.draw_networkx_edge_labels(G, pos, edge_labels=etiquetas_pesos, font_size=9)
+
+    leyenda = [
+        mpatches.Patch(color='#FF4444', label='Aristas del MST'),
+        mpatches.Patch(color='#AAAAAA', label='Aristas no usadas'),
+    ]
+    plt.legend(handles=leyenda, loc='upper left', fontsize=9)
+
+    plt.axis('off')
+    plt.tight_layout()
+    plt.savefig("kruskal_grafo.png", dpi=150, bbox_inches='tight')
+    plt.show()
+# ============================================================
+# FIN DE LA PARTE GRÁFICA
+# ============================================================
+
+
+if __name__ == "__main__":
+
+    # Lista de nodos del grafo
+    nodos = ['A', 'B', 'C', 'D', 'E']
+
+    # Lista de aristas: (nodo1, nodo2, peso)
+    # Como es no dirigido, no hace falta repetirlas en ambos sentidos
+    aristas = [
+        ('A', 'B', 2),
+        ('A', 'D', 6),
+        ('B', 'C', 3),
+        ('B', 'D', 8),
+        ('B', 'E', 5),
+        ('C', 'E', 7),
+        ('D', 'E', 9),
+    ]
+
+    arbol, costo = kruskal(nodos, aristas)
+    visualizar_grafo(nodos, aristas, arbol)
